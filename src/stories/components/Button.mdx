@@ -1,0 +1,50 @@
+import { Meta, Canvas, Story, Controls } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Welcome to Button's Documentation
+
+### When To Use
+A button means an operation (or a series of operations). Clicking a button will trigger corresponding business logic.
+
+In Ant Design we provide 5 types of button.
+
+<ul className="space-y-1">
+  <li>
+    Primary button: indicate the main action, one primary button at most in one section.
+  </li>
+  <li>
+    Link button: used for external links.
+  </li>
+</ul>
+
+
+## Examples
+### Secondary
+<Canvas of={ButtonStories.Secondary} />
+### Outline
+<Canvas of={ButtonStories.Outline} />
+
+Given these props:
+
+<ul>
+{Object.entries(ButtonStories.Outline.args).map(([prop, value]) => (
+  <li key={prop}>
+    {prop}: {value}
+  </li>
+))}
+</ul>
+
+```tsx
+<Button variant="outline">
+  Outline
+</Button>
+```
+
+
+This will be the result:
+<Story of={ButtonStories.Outline} />
+
+# API
+<Controls />
